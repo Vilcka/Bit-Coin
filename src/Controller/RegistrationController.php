@@ -18,7 +18,8 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class RegistrationController extends Controller
 {
     /**
-     * @Route("/Créer-un-compte", name="user_registration")
+     * @Route("/creer-un-compte", name="user_registration")
+     *
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -42,13 +43,11 @@ class RegistrationController extends Controller
             // ... do any other work - like sending them an email, etc
             // maybe set a "flash" success message for the user
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute("homepage");
         }
 
-        return $this->render(
-            'registration/register.html.twig',
-            array('form' => $form->createView())
-        );
+        return $this->render("Home/modalRegister.html.twig", array(
+            'form' => $form->createView()
+            ));
     }
-}
 }

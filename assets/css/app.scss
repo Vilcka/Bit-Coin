@@ -1,13 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~mdbootstrap/scss/mdb";
-
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+body {
+  padding-right: 0 !important
+}
 .homepage {
-  font-weight: bold;
+  .logoTitle {
+    font-family: 'Press Start 2P', cursive;
+    color:black;
+  }
   section {
     min-height: 750px;
   }
   a {
-    width:200px;
+    width: 200px;
   }
   .full-bg-img {
     min-height: 750px;

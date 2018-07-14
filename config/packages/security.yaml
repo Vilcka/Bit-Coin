@@ -23,6 +23,9 @@ security:
             form_login:
                 login_path: login
                 check_path: login
+            logout:
+                path: /logout
+                target: /
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
 
             # form_login: true
@@ -33,4 +36,6 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
+          - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+          - { path: ^/creer-un-compte, roles: IS_AUTHENTICATED_ANONYMOUSLY }
 
